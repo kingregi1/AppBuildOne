@@ -9,22 +9,22 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+var pizzas = 15
+var sodas = 30
+    @IBOutlet var FirstLabelAnswer: UILabel!
+    
     override func viewDidLoad() {
+        self.FirstLabelAnswer.text = "The Answer is"
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBAction func CalculateButtonPressed(_ sender: Any) {
+        let answer = pizzas+sodas
+self.view.backgroundColor = UIColor.red
+        print(answer)
+}
+    
 }
